@@ -30,7 +30,7 @@ WHERE ID = :station_idÿ
 ORDER BY MONTH;
 EXEC SQL OPEN XYZ;ÿ
 New Line Inserted by Siddhartha 1
-New Line Inserted by Nilanjan 1
+New Line Inserted by Nilanjan 3
 while (SQLCODE != 100) {
 EXEC SQL FETCH XYZ INTO :mon, :temp, :rain, :Siddhartha;ÿ
 if (SQLCODE == 99)
