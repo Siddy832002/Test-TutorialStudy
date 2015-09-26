@@ -16,6 +16,7 @@ EXEC SQL SELECT ID INTO :station_id
 FROM STATIONÿ
 WHERE CITY = :city_name;
 if (SQLCODE == 100)
+Ñohh QA Failure
 {ÿ
 printf("There is no station for city %s\n",city_name);ÿ
 exit(0);ÿ
