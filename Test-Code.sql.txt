@@ -1,0 +1,41 @@
+#include<stdio.h>ÿ
+#include<string.h>ÿ
+EXEC SQL BEGIN DECLARE SECTION;
+long station_id;ÿ
+long mon;ÿ
+float temp;ÿ
+float rain;ÿ
+char city_name[21];ÿ
+long SQLCODE;
+EXEC SQL END DECLARE SECTION;ÿ
+main()ÿ
+{ÿ
+/* the CONNECT statement, if needed, goes here */ÿ
+strcpy(city_name,"Denver");ÿ
+EXEC SQL SELECT ID INTO :station_id
+FROM STATIONÿ
+WHERE CITY = :city_name;
+if (SQLCODE == 100)
+{ÿ
+printf("There is no station for city %s\n",city_name);ÿ
+exit(0);ÿ
+}
+printf("For the city %s, Station ID is %ld\n",city_name,station_id);ÿÿ
+printf("And here is the weather data:\n");ÿ
+EXEC SQL DECLARE XYZ CURSOR FOR
+SELECT MONTH, TEMP_F, RAIN_Iÿ
+FROM STATSÿ
+WHERE ID = :station_idÿ
+ORDER BY MONTH;
+EXEC SQL OPEN XYZ;ÿ
+while (SQLCODE != 100) {
+EXEC SQL FETCH XYZ INTO :mon, :temp, :rain;ÿ
+if (SQLCODE == 100)
+printf("end of list\n");
+else
+printf("month = %ld, temperature = %f, rainfall = %f\n",mon,temp,rain);
+}
+EXEC SQL CLOSE XYZ;ÿ
+exit(0);ÿ
+}
+
