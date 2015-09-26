@@ -7,6 +7,7 @@ float temp;ÿ
 float rain;ÿ
 char city_name[21];ÿ
 long SQLCODE;
+Long name_siddhartha;
 EXEC SQL END DECLARE SECTION;ÿ
 main()ÿ
 {ÿ
