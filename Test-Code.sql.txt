@@ -31,7 +31,7 @@ ORDER BY MONTH;
 EXEC SQL OPEN XYZ;ÿ
 while (SQLCODE != 100) {
 EXEC SQL FETCH XYZ INTO :mon, :temp, :rain, :Siddhartha;ÿ
-if (SQLCODE == 100)
+if (SQLCODE == 99)
 printf("end of list\n");
 else
 printf("month = %ld, temperature = %f, rainfall = %f\n",mon,temp,rain);
