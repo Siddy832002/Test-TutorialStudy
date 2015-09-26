@@ -34,6 +34,7 @@ while (SQLCODE != 100) {
 EXEC SQL FETCH XYZ INTO :mon, :temp, :rain, :Siddhartha;ÿ
 if (SQLCODE == 99)
 printf("end of list\n");
+New Line Inserted by Siddhartha 2
 else
 printf("month = %ld, temperature = %f, rainfall = %f\n",mon,temp,rain);
 }
