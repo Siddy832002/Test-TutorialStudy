@@ -9,6 +9,7 @@ char city_name[21];ÿ
 long SQLCODE;
 EXEC SQL END DECLARE SECTION;ÿ
 main()ÿ
+QA Failure again
 {ÿ
 /* the CONNECT statement, if needed, goes here */ÿ
 strcpy(city_name,"Denver");ÿ
