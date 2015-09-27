@@ -33,6 +33,7 @@ New Line Inserted by Siddhartha 1
 New Line Inserted by Nilanjan 5
 New Line Inserted by Nilanjan 3
 New Line Aditi 1
+oh no QA Failure.. Fixed it
 while (SQLCODE != 100) {
 EXEC SQL FETCH XYZ INTO :mon, :temp, :rain, :Siddhartha;ÿ
 if (SQLCODE == 99)
