@@ -10,6 +10,7 @@ long SQLCODE;
 Long name_siddhartha;
 EXEC SQL END DECLARE SECTION;ÿ
 main()ÿ
+hello
 {ÿ
 /* the CONNECT statement, if needed, goes here */ÿ
 strcpy(city_name,"Denver");ÿ
